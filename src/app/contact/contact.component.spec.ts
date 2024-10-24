@@ -1,6 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
+import { HttpClientModule } from '@angular/common/http';
+
+beforeEach(async () => {
+  await TestBed.configureTestingModule({
+    declarations: [ProductListComponent],
+    imports: [HttpClientModule] // Add this line
+  }).compileComponents();
+});
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
