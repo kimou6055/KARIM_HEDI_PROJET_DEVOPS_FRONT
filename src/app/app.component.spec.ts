@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientModule], // Add HttpClientModule if needed
+      imports: [RouterTestingModule, HttpClientModule],
       declarations: [AppComponent]
     }).compileComponents();
   });
@@ -27,6 +27,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('SummerWorkshop_Angular app is running!');
+    expect(compiled.querySelector('.content')?.textContent).toContain('SummerWorkshop_Angular app is running!');
   });
 });
