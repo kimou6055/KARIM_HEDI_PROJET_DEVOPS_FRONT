@@ -16,7 +16,9 @@ describe('ProductComponent', () => {
         {
           provide: ActivatedRoute,
           useValue: {
-            paramMap: of({ get: (key: string) => 'test-id' }) // Mock paramMap for the test
+            paramMap: of({
+              get: (key: string) => 'test-id' // Mock the paramMap with a value
+            })
           }
         }
       ]
