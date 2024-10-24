@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StockComponent } from './stock.component';
-import { HttpClientModule } from '@angular/common/http'; // Ensure HttpClientModule is imported
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog'; // Add this import
 
 describe('StockComponent', () => {
   let component: StockComponent;
@@ -8,8 +9,8 @@ describe('StockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [StockComponent], // Corrected to StockComponent
-      imports: [HttpClientModule] // Include HttpClientModule here for tests
+      declarations: [StockComponent],
+      imports: [HttpClientModule, MatDialogModule] // Add MatDialogModule here
     }).compileComponents();
   });
 
