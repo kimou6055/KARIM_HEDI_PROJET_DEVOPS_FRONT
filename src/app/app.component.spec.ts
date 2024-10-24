@@ -3,18 +3,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-beforeEach(async () => {
-  await TestBed.configureTestingModule({
-    declarations: [ProductListComponent],
-    imports: [HttpClientModule] // Add this line
-  }).compileComponents();
-});
-
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientModule], // Include necessary modules
+      declarations: [AppComponent] // Declare AppComponent only
+    }).compileComponents();
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
